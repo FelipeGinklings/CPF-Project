@@ -43,13 +43,7 @@ int main() {
     d7 = ((cpf-(cpf % E5)) / E5) % 10;
     d8 = ((cpf-(cpf % E6)) / E6) % 10;
     d9 = ((cpf-(cpf % E7)) / E7) % 10;
-    d10 = ((cpf-(cpf % E8)) / E8) % 10; 
-
-    // Para o programa se tiver menos que 8 digitos
-    if (d2 == 0 || d3 == 0 || d4 == 0 || d5 == 0 || d6 == 0 || d7 == 0 || d8 == 0 || d9 == 0) {
-        cout << "Digitos insuficientes no CPF!";
-        return 0;
-    }
+    d10 = ((cpf-(cpf % E8)) / E8) % 10;
     
     // Primeiro digito verificador do CPF
     int firstVD;
@@ -71,7 +65,7 @@ int main() {
     secondVD = firstVD * 2;
     secondVD += (d2 * 3) + (d3 * 4) + (d4 * 5);
     secondVD += (d5 * 6) + (d6 * 7) + (d7 * 8);
-    secondVD += (d8 * 9) + (d9 * 10) + (d10 * 10);
+    secondVD += (d8 * 9) + (d9 * 10) + (d10 * 11);
     // Resto da divisão
     secondVD %= 11;
     if (secondVD < 2) {
