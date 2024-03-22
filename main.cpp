@@ -33,6 +33,12 @@ int main() {
     cout << "Qual eh os primeiro digitos (9 a 8) do seu cpf? ";
     cin >> cpf;
 
+    // Verificar o tamanho do CPF
+    if ((cpf < 10000000) || (cpf > 999999999)) {
+        cout << "Seu CPF eh invalido por favor tente novamente!";
+        return 0;
+    }
+
     // Digitos da esquerda para direita
     int d2, d3, d4, d5, d6, d7, d8, d9, d10;
     d2 = cpf % 10;
