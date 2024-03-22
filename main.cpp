@@ -99,7 +99,7 @@ int main() {
 
     } else {
         // Caso tenha sido colocado um número com menos de 8 dígitos ou com mais de 9 dígitos.
-        cout << "CPF inválido!";
+        cout << "CPF invalido!";
     }
 
     return 0;
