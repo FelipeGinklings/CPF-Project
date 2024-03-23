@@ -1,13 +1,20 @@
+// Eduardo José de Souza, Caethano, Arthur Felipe e Felipe Ginklings.
+
 #include <iostream>
 
 using namespace std;
 
 int main() {
 
-    int cpf, cpfCalc, d1, d2, d3, d4, d5, d6, d7, d8, d9, resto, digVerificador1, digVerificador2;
+    int cpf, cpfCalc, d1, d2, d3, d4, d5, d6, d7, d8, d9, resto, digVerificador1, digVerificador2; // Declaração de variáveis
 
     cout<<"Digite um CPF sem os dois digitos finais (digitos verificadores): ";
     cin >> cpf;
+
+    if ((cpf < 10000000) || (cpf > 999999999)) { // Verifica se o cpf digitado tem de 8 a 9 dígitos.
+        cout << "O CPF digitado e invalido, tente novamente.";
+        return 0;
+    }
 
     cpfCalc = cpf; // O valor do cpf é atribuído a outra variável para preservar o valor original do cpf, que será usado depois.
 
@@ -47,7 +54,7 @@ int main() {
         digVerificador1 = 0;
     } else {
         digVerificador1 = 11 - resto;
-        /* Se o resto fosse menor que dois, o dígito verificador seria um número de 2 dígitos, o que não faria sentido,
+        /* Se o resto fosse menor que 2, o dígito verificador seria um número de 2 dígitos, o que não faria sentido,
         por isso é feita a verificação. */
     }
 
