@@ -27,7 +27,7 @@ int main() {
     cpf /= 10; // Remove o último digito do cpf e retorna o novo cpf
     d8 = cpf % 10; // O último digito do novo cpf
     // O processo acima se repete abaixo
-    cpf /= 10; 
+    cpf /= 10;
     d7 = cpf % 10;
     cpf /= 10;
     d6 = cpf % 10;
@@ -39,10 +39,10 @@ int main() {
     d3 = cpf % 10;
     cpf /= 10;
     d2 = cpf % 10;
-    d1 /= 10;
+    d1 = cpf / 10;
 
     // Verifica se os 8 primeiros digitos são zero
-    if (d2 == 0 || d3 == 0 || d4 == 0 || d5 == 0 || d6 == 0 || d7 == 0 || d8 == 0 || d9 == 0) {
+    if (d2 == 0 && d3 == 0 && d4 == 0 && d5 == 0 && d6 == 0 && d7 == 0 && d8 == 0 && d9 == 0) {
         cout << "Seu CPF eh invalido por favor tente novamente!";
         return 0;
     }
@@ -54,7 +54,7 @@ int main() {
     v1 = (d1*10) + (d2*9) + (d3*8);
     v1 += (d4*7) + (d5*6) + (d6*5);
     v1 += (d7*4) + (d8*3) + (d9*2);
-    v1 = v2;
+    v2 = v1;
 
     // Resto da divisão por 11.
     v1 %= 11;
