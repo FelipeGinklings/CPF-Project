@@ -41,12 +41,6 @@ int main() {
     d2 = cpf % 10;
     d1 = cpf / 10;
 
-    // Verifica se os 8 primeiros digitos são zero
-    if (d2 == 0 && d3 == 0 && d4 == 0 && d5 == 0 && d6 == 0 && d7 == 0 && d8 == 0 && d9 == 0) {
-        cout << "Seu CPF eh invalido por favor tente novamente!";
-        return 0;
-    }
-
     // v = Dígito verificador
     int v1, v2;
 
