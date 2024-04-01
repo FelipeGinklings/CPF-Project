@@ -5,7 +5,10 @@ using namespace std;
 
 /*
 Descrição:
-Faça um algoritmo em C++ que solicite ao usuário UM valor inteiro de 8 a 9 dígitos, que irá representar o número de um CPF. A seguir, calcule os dois dígitos verificadores, conforme instruções abaixo, e exiba o CPF completo. 
+Faça um algoritmo em C++ que solicite ao usuário UM valor inteiro de 8 a 9 dígitos,
+que irá representar o número de um CPF.
+A seguir, calcule os dois dígitos verificadores,
+conforme as instruções, e exiba o CPF completo. 
 */
 
 int main() {
@@ -16,7 +19,7 @@ int main() {
 
     // Verifica se tem 8 ou 9 dígitos
     if ((cpf < 10000000) || (cpf > 999999999)) {
-        cout << "Seu CPF eh invalido por favor tente novamente!";
+        cout << "Seu CPF é inválido, por favor, tente novamente!";
         return 0; // Finaliza o programa
     }
 
@@ -78,7 +81,7 @@ int main() {
     }
 
     // Mostra o novo cpf
-    cout << "Seu CPF com os dois digitos verificadores eh: ";
+    cout << "Seu CPF com os dois digitos verificadores é: ";
     cout << d1 << d2 << d3 << ".";
     cout << d4 << d5 << d6 << ".";
     cout << d7 << d8 << d9 << "-";
